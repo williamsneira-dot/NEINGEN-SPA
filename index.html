@@ -3,116 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEINGEN SpA</title>
+    <title>NEINGEN SpA | Ingeniería y Soluciones Tecnológicas</title>
     <style>
         :root {
-            --color-primary: #104f55;
-            --color-dark: #222222;
-            --color-light: #f9f9f9;
+            --primary-color: #0f172a;
+            --accent-color: #2563eb;
+            --text-color: #334155;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--color-light);
-            color: var(--color-dark);
+            color: var(--text-color);
+            background-color: var(--bg-light);
             line-height: 1.6;
         }
 
         header {
-            background-color: #ffffff;
-            text-align: center;
-            padding: 2.5rem 1rem;
-            border-bottom: 1px solid #eaeaea;
-        }
-
-        header img {
-            max-width: 110px;
-            height: auto;
-            mix-blend-mode: multiply;
-            display: block;
-            margin: 0 auto;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
         header h1 {
-            color: var(--color-primary);
-            font-size: 2.2rem;
-            margin-top: 0.8rem;
-            margin-bottom: 0.2rem;
-            font-weight: 700;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
         }
 
-        header p {
-            color: #666;
-            font-size: 1.1rem;
-            margin: 0;
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
         }
 
-        main {
-            max-width: 900px;
-            margin: 3rem auto;
-            padding: 0 1.5rem;
+        nav a:hover {
+            color: var(--accent-color);
         }
 
-        section {
-            background: #ffffff;
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #1e293b);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            color: #94a3b8;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
             padding: 2.5rem;
-            margin-bottom: 2rem;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
         }
 
-        h2 {
-            color: var(--color-primary);
-            border-bottom: 2px solid var(--color-primary);
-            padding-bottom: 0.5rem;
-            margin-top: 0;
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         footer {
+            background-color: var(--primary-color);
+            color: #94a3b8;
             text-align: center;
-            padding: 1.5rem;
-            background-color: #222222;
-            color: #ffffff;
+            padding: 2rem;
             font-size: 0.9rem;
-            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Isotipo con ajuste para integrar el fondo -->
-        <img src="IMG_4851.JPG" alt="Isotipo NEINGEN SpA">
         <h1>NEINGEN SpA</h1>
-        <p>Innovación, Ingeniería y Soluciones Tecnológicas</p>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <main>
-        <section>
-            <h2>Sobre Nosotros</h2>
-            <p>Somos una empresa enfocada en entregar soluciones de alta calidad en el sector de la ingeniería y gestión tecnológica, impulsando la optimización y el desarrollo de proyectos con un enfoque sostenible y moderno.</p>
-        </section>
+    <section class="hero" id="inicio">
+        <h2>Soluciones de Ingeniería y Tecnología</h2>
+        <p>Optimizamos el rendimiento y la infraestructura digital de tu empresa con estándares de alta calidad.</p>
+        <a href="#contacto" class="btn">Contáctanos</a>
+    </section>
 
-        <section>
-            <h2>Nuestros Servicios</h2>
-            <ul>
-                <li>Consultoría y Gestión Tecnológica.</li>
-                <li>Desarrollo y Optimización de Proyectos de Ingeniería.</li>
-                <li>Asesoría especializada en eficiencia energética y soluciones habitacionales.</li>
-            </ul>
-        </section>
+    <div class="container" id="servicios">
+        <h2 class="section-title">Nuestras Áreas</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Consultoría Tecnológica</h3>
+                <p>Asesoría especializada para alinear la infraestructura informática con los objetivos estratégicos de tu negocio.</p>
+            </div>
+            <div class="card">
+                <h3>Desarrollo e Integración</h3>
+                <p>Implementación de soluciones robustas, gestión de dominios, correos corporativos y despliegue web seguro.</p>
+            </div>
+            <div class="card">
+                <h3>Soporte y Operaciones</h3>
+                <p>Mantenimiento continuo y respaldo técnico preventivo para asegurar la continuidad operacional de tus sistemas.</p>
+            </div>
+        </div>
+    </div>
 
-        <section>
-            <h2>Contacto</h2>
-            <p>¿Tienes algún proyecto en mente o necesitas más información? No dudes en escribirnos.</p>
-            <p><strong>Correo electrónico:</strong> contacto@neingen.cl</p>
-        </section>
-    </main>
-
-    <footer>
+    <footer id="contacto">
         <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
+        <p>Contacto corporativo: contacto@neingen.cl</p>
     </footer>
 
 </body>
