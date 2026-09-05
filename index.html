@@ -6,10 +6,10 @@
     <title>NEINGEN | Ingeniería Aplicada SpA</title>
     <style>
         :root {
-            --primary-color: #4b515d; /* Color Grafito del logo para footer y títulos */
-            --accent-color: #127d78; /* Verde/Teal exacto del logo NEINGEN */
+            --primary-color: #4b515d; 
+            --accent-color: #127d78; 
             --text-color: #334155;
-            --grafito: #4b515d; /* Color grafito para el texto del logo */
+            --grafito: #4b515d; 
             --bg-light: #f8fafc;
             --white: #ffffff;
         }
@@ -36,24 +36,35 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
+        /* AJUSTES EXACTOS DE PROPORCIÓN DEL LOGO Y TEXTO */
         .brand-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-decoration: none;
+            gap: 6px; /* Separación precisa entre la 'N' y las letras */
         }
 
-        /* LOGO MÁS GRANDE */
         .brand-container img {
-            height: 85px; 
-            margin-bottom: 5px;
+            height: 70px; /* Tamaño equilibrado de la N */
+            display: block;
         }
 
         .brand-container h1 {
-            font-size: 1.5rem;
-            letter-spacing: 0.5px;
+            font-size: 1.75rem; /* Proporción del texto respecto a la imagen */
             color: var(--grafito);
-            font-weight: 600;
+            margin: 0;
+            line-height: 1;
+            letter-spacing: 0.5px;
+        }
+
+        /* CLASES PARA SEPARAR EL GROSOR DE LAS PALABRAS */
+        .brand-bold {
+            font-weight: 800; /* NEINGEN muy destacado */
+        }
+
+        .brand-light {
+            font-weight: 400; /* SpA delgado */
         }
 
         nav a {
@@ -99,7 +110,7 @@
         }
 
         .btn:hover {
-            background-color: #0e5e5a; /* Tono verde ligeramente más oscuro para el efecto al pasar el mouse */
+            background-color: #0e5e5a;
         }
 
         .container {
@@ -153,7 +164,8 @@
     <header>
         <a href="#inicio" class="brand-container">
             <img src="IMG_4851.JPG" alt="Logo NEINGEN">
-            <h1>NEINGEN SpA</h1>
+            <!-- APLICACIÓN DE LAS CLASES BOLD Y LIGHT PARA REPLICAR LA IMAGEN -->
+            <h1><span class="brand-bold">NEINGEN</span> <span class="brand-light">SpA</span></h1>
         </a>
         <nav>
             <a href="#inicio">Inicio</a>
@@ -186,10 +198,9 @@
         </div>
     </div>
 
-    <!-- PIE DE PÁGINA ACTUALIZADO -->
     <footer id="contacto">
-        <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
-        <p>Contacto: contacto@neingen.cl</p>
+        <p>&copy; 2026 NEINGEN Ingeniería Aplicada SpA. Todos los derechos reservados.</p>
+        <p>Contacto: contactoq@neingen.cl</p>
     </footer>
 
 </body>
