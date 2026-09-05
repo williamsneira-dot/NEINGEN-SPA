@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NEINGEN SpA | Ingeniería y Soluciones Tecnológicas</title>
+    <title>NEINGEN | Ingeniería Aplicada SpA</title>
     <style>
         :root {
-            --primary-color: #0f172a;
-            --accent-color: #2563eb;
+            --primary-color: #0f172a; /* Azul muy oscuro/pizarra */
+            --accent-color: #0d9488; /* Verde esmeralda/teal basado en tu logo */
             --text-color: #334155;
-            --grafito: #4b515d; /* Color grafito exacto para el texto del logo */
+            --grafito: #4b515d; /* Color grafito para el texto del logo */
             --bg-light: #f8fafc;
             --white: #ffffff;
         }
@@ -27,7 +27,6 @@
             line-height: 1.6;
         }
 
-        /* Modificamos el header a fondo blanco para que el logo y el texto grafito resalten */
         header {
             background-color: var(--white);
             padding: 1rem 2rem;
@@ -37,7 +36,6 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        /* Contenedor que apila el logo (arriba) y el texto (abajo) */
         .brand-container {
             display: flex;
             flex-direction: column;
@@ -46,18 +44,17 @@
         }
 
         .brand-container img {
-            height: 45px; /* Tamaño del isotipo (la 'N') */
-            margin-bottom: 2px;
+            height: 50px; 
+            margin-bottom: 5px;
         }
 
         .brand-container h1 {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             letter-spacing: 0.5px;
-            color: var(--grafito); /* TEXTO APLICADO EN COLOR GRAFITO */
+            color: var(--grafito);
             font-weight: 600;
         }
 
-        /* Ajustamos el color de los enlaces del nav para que se vean en fondo blanco */
         nav a {
             color: var(--text-color);
             text-decoration: none;
@@ -84,9 +81,9 @@
 
         .hero p {
             font-size: 1.2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto 2rem;
-            color: #94a3b8;
+            color: #cbd5e1;
         }
 
         .btn {
@@ -101,7 +98,7 @@
         }
 
         .btn:hover {
-            background-color: #1d4ed8;
+            background-color: #0f766e;
         }
 
         .container {
@@ -129,6 +126,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
+            border-top: 4px solid var(--accent-color);
         }
 
         .card:hover {
@@ -152,48 +150,46 @@
 <body>
 
     <header>
-        <!-- Integración del logo y texto grafito -->
         <a href="#inicio" class="brand-container">
-            <img src="IMG_4865.JPG" alt="Isotipo N">
+            <!-- Asegúrate de subir IMG_4865.JPG a la misma carpeta que este archivo -->
+            <img src="IMG_4865.JPG" alt="Logo NEINGEN">
             <h1>NEINGEN SpA</h1>
         </a>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#servicios">Servicios</a>
+            <a href="#servicios">Especialidades</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
 
     <section class="hero" id="inicio">
-        <h2>Soluciones de Ingeniería y Tecnología</h2>
-        <p>Optimizamos el rendimiento y la infraestructura digital de tu empresa con estándares de alta calidad.</p>
+        <h2>Ingeniería Aplicada para el Futuro</h2>
+        <p>Aportamos valor a tus proyectos a través de la Industrialización, Sostenibilidad e Innovación.</p>
         <a href="#contacto" class="btn">Contáctanos</a>
     </section>
 
     <div class="container" id="servicios">
-        <h2 class="section-title">Nuestras Áreas</h2>
+        <h2 class="section-title">Nuestras Áreas de Especialidad</h2>
         <div class="services-grid">
             <div class="card">
-                <h3>Consultoría Tecnológica</h3>
-                <p>Asesoría especializada para alinear la infraestructura informática con los objetivos estratégicos de tu negocio.</p>
+                <h3>Construcción Industrializada</h3>
+                <p>Aplicamos metodologías y procesos avanzados para optimizar el ciclo de vida del proyecto, garantizando mayor eficiencia, calidad y reducción de plazos.</p>
             </div>
             <div class="card">
-                <h3>Desarrollo e Integración</h3>
-                <p>Implementación de soluciones robustas, gestión de dominios, correos corporativos y despliegue web seguro.</p>
+                <h3>Gestión Tecnológica</h3>
+                <p>Integramos herramientas y soluciones tecnológicas de vanguardia en la ingeniería para maximizar el rendimiento y mejorar la toma de decisiones.</p>
             </div>
             <div class="card">
-                <h3>Soporte y Operaciones</h3>
-                <p>Mantenimiento continuo y respaldo técnico preventivo para asegurar la continuidad operacional de tus sistemas.</p>
+                <h3>Innovación y Sostenibilidad</h3>
+                <p>Desarrollamos estrategias integrales con un enfoque sostenible, asegurando un impacto positivo en el entorno y eficiencia operativa a largo plazo.</p>
             </div>
         </div>
     </div>
 
     <footer id="contacto">
-        <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
-        <p>Contacto corporativo: contacto@neingen.cl</p>
+        <p>&copy; 2026 NEINGEN Ingeniería Aplicada SpA. Todos los derechos reservados.</p>
+        <p>Contacto: williams.neira@neingen.cl | +569 8767 6686</p>
     </footer>
 
 </body>
 </html>
-index.html
-Mostrando index.html.
