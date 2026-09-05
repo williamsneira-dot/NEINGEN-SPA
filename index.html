@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEINGEN | Ingeniería Aplicada SpA</title>
-    
-    <!-- 1. FAVICON: El ícono de la pestaña del navegador -->
-    <link rel="icon" type="image/jpeg" href="IMG_4851.JPG">
-
     <style>
         :root {
             --primary-color: #4b515d; 
@@ -24,20 +20,13 @@
             box-sizing: border-box;
         }
 
-        /* 2. SCROLL SUAVE */
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             color: var(--text-color);
             background-color: var(--bg-light);
             line-height: 1.6;
-            padding-top: 100px; /* Espacio para que el header fijo no tape el inicio */
         }
 
-        /* HEADER FIJO Y MENÚ MÓVIL */
         header {
             background-color: var(--white);
             padding: 1rem 2rem;
@@ -45,40 +34,37 @@
             justify-content: space-between; 
             align-items: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
         }
 
+        /* AJUSTES EXACTOS DE PROPORCIÓN DEL LOGO Y TEXTO */
         .brand-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            gap: 6px; 
+            gap: 6px; /* Separación precisa entre la 'N' y las letras */
         }
 
         .brand-container img {
-            height: 70px; 
+            height: 120px; /* Tamaño equilibrado de la N */
             display: block;
         }
 
         .brand-container h1 {
-            font-size: 1.75rem; 
+            font-size: 1.75rem; /* Proporción del texto respecto a la imagen */
             color: var(--grafito);
             margin: 0;
             line-height: 1;
             letter-spacing: 0.5px;
         }
 
-        .brand-bold { font-weight: 800; }
-        .brand-light { font-weight: 400; }
+        /* CLASES PARA SEPARAR EL GROSOR DE LAS PALABRAS */
+        .brand-bold {
+            font-weight: 700; /* NEINGEN muy destacado */
+        }
 
-        nav {
-            display: flex;
-            align-items: center;
+        .brand-light {
+            font-weight: 400; /* SpA delgado */
         }
 
         nav a {
@@ -93,50 +79,6 @@
             color: var(--accent-color);
         }
 
-        /* 3. BOTÓN DE MENÚ PARA CELULARES */
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 5px;
-        }
-
-        .menu-toggle span {
-            width: 25px;
-            height: 3px;
-            background-color: var(--primary-color);
-            transition: all 0.3s ease;
-        }
-
-        /* RESPONSIVE (CELULARES) */
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: flex;
-            }
-            
-            nav {
-                display: none; /* Oculto por defecto en móviles */
-                flex-direction: column;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--white);
-                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-                padding: 1rem 0;
-            }
-
-            nav.active {
-                display: flex; /* Se muestra al hacer clic */
-            }
-
-            nav a {
-                margin: 10px 0;
-                font-size: 1.2rem;
-            }
-        }
-
-        /* SECCIONES COMUNES */
         .hero {
             background: linear-gradient(135deg, var(--grafito), #373c45);
             color: var(--white);
@@ -144,8 +86,17 @@
             padding: 6rem 2rem;
         }
 
-        .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; color: #cbd5e1; }
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
 
         .btn {
             display: inline-block;
@@ -156,16 +107,16 @@
             text-decoration: none;
             font-weight: 600;
             transition: background-color 0.3s ease;
-            border: none;
-            cursor: pointer;
         }
 
-        .btn:hover { background-color: #0e5e5a; }
+        .btn:hover {
+            background-color: #0e5e5a;
+        }
 
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 5rem 2rem;
+            padding: 4rem 2rem;
         }
 
         .section-title {
@@ -190,83 +141,21 @@
             border-top: 4px solid var(--accent-color);
         }
 
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-bottom: 1rem; color: var(--primary-color); }
-
-        /* ESTILOS DEL FORMULARIO */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        .card:hover {
+            transform: translateY(-5px);
         }
 
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px 15px;
-            border: 1px solid #cbd5e1;
-            border-radius: 5px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        .contact-form input:focus, .contact-form textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
 
         footer {
             background-color: var(--primary-color);
             color: #d1d5db;
             text-align: center;
-            padding: 3rem 2rem;
+            padding: 2rem;
             font-size: 0.9rem;
-        }
-
-        .email-link {
-            color: #d1d5db;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        .email-link:hover {
-            color: var(--accent-color); 
-            text-decoration: underline;
-        }
-
-        /* 6. BOTÓN DE WHATSAPP FLOTANTE */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            transition: transform 0.3s ease;
-            text-decoration: none;
-        }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-        }
-
-        .whatsapp-float svg {
-            width: 35px;
-            height: 35px;
-            fill: currentColor;
         }
     </style>
 </head>
@@ -275,21 +164,12 @@
     <header>
         <a href="#inicio" class="brand-container">
             <img src="IMG_4851.JPG" alt="Logo NEINGEN">
+            <!-- APLICACIÓN DE LAS CLASES BOLD Y LIGHT PARA REPLICAR LA IMAGEN -->
             <h1><span class="brand-bold">NEINGEN</span> <span class="brand-light">SpA</span></h1>
         </a>
-        
-        <!-- Ícono del menú para celulares -->
-        <div class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav id="nav-links">
+        <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Nosotros</a>
             <a href="#servicios">Especialidades</a>
-            <a href="#proyectos">Proyectos</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -300,18 +180,9 @@
         <a href="#contacto" class="btn">Contáctanos</a>
     </section>
 
-    <!-- 4a. NUEVA SECCIÓN: SOBRE NOSOTROS -->
-    <section class="container" id="nosotros">
-        <h2 class="section-title">Sobre Nosotros</h2>
-        <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-            <p style="font-size: 1.1rem; margin-bottom: 1rem;">En <strong>NEINGEN SpA</strong> somos expertos en la integración de metodologías modernas para el desarrollo de proyectos de ingeniería. Como socios profesionales del Consejo de Construcción Industrializada (CCI), nuestra visión es transformar la industria.</p>
-            <p style="font-size: 1.1rem;">Nuestra trayectoria nos permite abordar desafíos complejos asegurando rentabilidad, optimización de recursos y un firme compromiso con la sustentabilidad.</p>
-        </div>
-    </section>
-
-    <section class="container" id="servicios" style="background-color: var(--white); padding-top: 5rem; padding-bottom: 5rem; max-width: 100%;">
+    <div class="container" id="servicios">
         <h2 class="section-title">Nuestras Áreas de Especialidad</h2>
-        <div class="services-grid" style="max-width: 1100px; margin: 0 auto;">
+        <div class="services-grid">
             <div class="card">
                 <h3>Construcción Industrializada</h3>
                 <p>Aplicamos metodologías y procesos avanzados para optimizar el ciclo de vida del proyecto, garantizando mayor eficiencia, calidad y reducción de plazos.</p>
@@ -325,58 +196,12 @@
                 <p>Desarrollamos estrategias integrales con un enfoque sostenible, asegurando un impacto positivo en el entorno y eficiencia operativa a largo plazo.</p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <!-- 4b. NUEVA SECCIÓN: PROYECTOS (PORTAFOLIO) -->
-    <section class="container" id="proyectos">
-        <h2 class="section-title">Proyectos y Casos de Éxito</h2>
-        <div class="services-grid">
-            <div class="card" style="border-top: none; border-left: 4px solid var(--accent-color);">
-                <h3>Optimización Estructural</h3>
-                <p>Implementación de estrategias de diseño industrializado que redujeron el tiempo de ejecución en terreno en un 20%.</p>
-            </div>
-            <div class="card" style="border-top: none; border-left: 4px solid var(--accent-color);">
-                <h3>Gestión Tecnológica BIM</h3>
-                <p>Coordinación multidisciplinaria y modelado de información para evitar interferencias y sobrecostos en obra.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. SECCIÓN DE CONTACTO CON FORMULARIO -->
-    <section class="container" id="contacto" style="background-color: var(--white); max-width: 100%;">
-        <h2 class="section-title">Escríbenos</h2>
-        <form class="contact-form" action="mailto:contacto@neingen.cl" method="post" enctype="text/plain">
-            <input type="text" name="Nombre" placeholder="Tu Nombre o Empresa" required>
-            <input type="email" name="Correo" placeholder="Tu Correo Electrónico" required>
-            <textarea name="Mensaje" rows="5" placeholder="¿En qué te podemos ayudar?" required></textarea>
-            <button type="submit" class="btn">Enviar Mensaje</button>
-        </form>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 NEINGEN SPA. Todos los derechos reservados.</p>
-        <p style="margin-top: 10px;">Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
+    <footer id="contacto">
+        <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
+        <!-- Aquí agregamos la etiqueta <a> con el mailto: -->
+        <p>Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
     </footer>
-
-    <!-- BOTÓN WHATSAPP -->
-    <a href="https://wa.me/56987676686" class="whatsapp-float" target="_blank" title="Hablemos por WhatsApp">
-        <svg viewBox="0 0 24 24">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-        </svg>
-    </a>
-
-    <!-- SCRIPT PARA QUE FUNCIONE EL MENÚ EN CELULARES -->
-    <script>
-        document.getElementById('mobile-menu').addEventListener('click', function() {
-            document.getElementById('nav-links').classList.toggle('active');
-        });
-
-        // Ocultar menú al hacer clic en un enlace (para celulares)
-        document.querySelectorAll('#nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                document.getElementById('nav-links').classList.remove('active');
-            });
-        });
-    </script>
 </body>
 </html>
