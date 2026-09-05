@@ -9,6 +9,7 @@
             --primary-color: #0f172a;
             --accent-color: #2563eb;
             --text-color: #334155;
+            --grafito: #4b515d; /* Color grafito exacto para el texto del logo */
             --bg-light: #f8fafc;
             --white: #ffffff;
         }
@@ -26,23 +27,39 @@
             line-height: 1.6;
         }
 
+        /* Modificamos el header a fondo blanco para que el logo y el texto grafito resalten */
         header {
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 1.5rem 2rem;
+            background-color: var(--white);
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        header h1 {
-            font-size: 1.5rem;
-            letter-spacing: 1px;
+        /* Contenedor que apila el logo (arriba) y el texto (abajo) */
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
         }
 
+        .brand-container img {
+            height: 45px; /* Tamaño del isotipo (la 'N') */
+            margin-bottom: 2px;
+        }
+
+        .brand-container h1 {
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
+            color: var(--grafito); /* TEXTO APLICADO EN COLOR GRAFITO */
+            font-weight: 600;
+        }
+
+        /* Ajustamos el color de los enlaces del nav para que se vean en fondo blanco */
         nav a {
-            color: var(--white);
+            color: var(--text-color);
             text-decoration: none;
             margin-left: 1.5rem;
             font-weight: 500;
@@ -135,7 +152,11 @@
 <body>
 
     <header>
-        <h1>NEINGEN SpA</h1>
+        <!-- Integración del logo y texto grafito -->
+        <a href="#inicio" class="brand-container">
+            <img src="IMG_4865.JPG" alt="Isotipo N">
+            <h1>NEINGEN SpA</h1>
+        </a>
         <nav>
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
@@ -174,3 +195,5 @@
 
 </body>
 </html>
+index.html
+Mostrando index.html.
