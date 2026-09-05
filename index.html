@@ -1,19 +1,195 @@
-:root {
-            /* Cambiamos el color principal al Grafito del logo */
-            --primary-color: #4b515d; 
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEINGEN | Ingeniería Aplicada SpA</title>
+    <style>
+        :root {
+            --primary-color: #4b515d; /* Color Grafito del logo para footer y títulos */
             --accent-color: #0d9488; /* Verde esmeralda del logo */
             --text-color: #334155;
-            --grafito: #4b515d; 
+            --grafito: #4b515d; /* Color grafito para el texto del logo */
             --bg-light: #f8fafc;
             --white: #ffffff;
         }
 
-        /* ... (mantén el resto del código igual hasta llegar a .hero) ... */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .brand-container img {
+            height: 50px; 
+            margin-bottom: 5px;
+        }
+
+        .brand-container h1 {
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+            color: var(--grafito);
+            font-weight: 600;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
 
         .hero {
-            /* Aplicamos un degradado sutil basado en el grafito para darle profundidad */
+            /* Degradado sutil basado en el grafito */
             background: linear-gradient(135deg, var(--grafito), #373c45);
             color: var(--white);
             text-align: center;
             padding: 6rem 2rem;
         }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0f766e;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #d1d5db;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#inicio" class="brand-container">
+            <img src="IMG_4851.JPG" alt="Logo NEINGEN">
+            <h1>NEINGEN SpA</h1>
+        </a>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Especialidades</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="inicio">
+        <h2>Ingeniería Aplicada para el Futuro</h2>
+        <p>Aportamos valor a tus proyectos a través de la Industrialización, Sostenibilidad e Innovación.</p>
+        <a href="#contacto" class="btn">Contáctanos</a>
+    </section>
+
+    <div class="container" id="servicios">
+        <h2 class="section-title">Nuestras Áreas de Especialidad</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Construcción Industrializada</h3>
+                <p>Aplicamos metodologías y procesos avanzados para optimizar el ciclo de vida del proyecto, garantizando mayor eficiencia, calidad y reducción de plazos.</p>
+            </div>
+            <div class="card">
+                <h3>Gestión Tecnológica</h3>
+                <p>Integramos herramientas y soluciones tecnológicas de vanguardia en la ingeniería para maximizar el rendimiento y mejorar la toma de decisiones.</p>
+            </div>
+            <div class="card">
+                <h3>Innovación y Sostenibilidad</h3>
+                <p>Desarrollamos estrategias integrales con un enfoque sostenible, asegurando un impacto positivo en el entorno y eficiencia operativa a largo plazo.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer id="contacto">
+        <p>&copy; 2026 NEINGEN Ingeniería Aplicada SpA. Todos los derechos reservados.</p>
+        <p>Contacto: williams.neira@neingen.cl | +569 8767 6686</p>
+    </footer>
+
+</body>
+</html>
