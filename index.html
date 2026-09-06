@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEINGEN | Ingeniería Aplicada SpA</title>
     <style>
+html {
+            scroll-behavior: smooth; /* Hace que el viaje hacia arriba sea fluido */
+        }
+                
         :root {
             --primary-color: #4b515d; 
             --accent-color: #127d78; 
@@ -169,6 +173,28 @@
             padding: 2rem;
             font-size: 0.9rem;
         }
+
+/* CORRECCIÓN PARA CELULARES EN EL CÓDIGO ACTUAL */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                margin-top: 0.5rem;
+            }
+
+            nav a {
+                margin: 0 0.75rem; /* Distribuye los enlaces ordenadamente abajo */
+                font-size: 0.95rem;
+            }
+        }
+      
     </style>
 </head>
 <body>
