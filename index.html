@@ -161,8 +161,12 @@
             background-color: var(--primary-color);
             color: #d1d5db;
             text-align: center;
-            padding: 2rem;
+            padding: 2.5rem 1rem;
             font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem; /* Da un respiro elegante entre cada línea del footer */
         }
 
         .email-link {
@@ -238,10 +242,11 @@
     </div>
 
     <footer id="contacto">
-        <!-- Uso de &nbsp; para evitar que se divida de forma extraña en pantallas pequeñas -->
-        <p>&copy; 2026 NEINGEN SpA. Todos los&nbsp;derechos&nbsp;reservados.</p>
-        <p style="margin-top: 5px;">Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
-        <p style="margin-top: 15px;">
+        <!-- Cada bloque de información ahora va en su propia línea controlada -->
+        <p>&copy; 2026 NEINGEN SpA.</p>
+        <p>Todos los derechos reservados.</p>
+        <p>Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
+        <p style="margin-top: 1rem;">
             <a href="#inicio" class="email-link" style="font-size: 0.85rem; opacity: 0.8;">↑ Volver arriba</a>
         </p>
     </footer>
