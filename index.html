@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEINGEN | Ingeniería Aplicada SpA</title>
     <style>
-html {
+        html {
             scroll-behavior: smooth; /* Hace que el viaje hacia arriba sea fluido */
         }
                 
@@ -49,12 +49,7 @@ html {
             gap: 6px; /* Separación precisa entre la 'N' y las letras */
         }
 
-        .brand-container img {
-            height: 120px; /* Tamaño equilibrado de la N */
-            display: block;
-        }
-
-/* Agrega una transición suave a la imagen original */
+        /* Agrega una transición suave a la imagen original con el tamaño equilibrado de 120px */
         .brand-container img {
             height: 120px;
             display: block;
@@ -174,7 +169,19 @@ html {
             font-size: 0.9rem;
         }
 
-/* CORRECCIÓN PARA CELULARES EN EL CÓDIGO ACTUAL */
+        .email-link {
+            color: #d1d5db;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: var(--accent-color);
+            text-decoration: underline;
+        }
+
+        /* CORRECCIÓN PARA CELULARES EN EL CÓDIGO ACTUAL */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -238,8 +245,11 @@ html {
 
     <footer id="contacto">
         <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
-        <!-- Aquí agregamos la etiqueta <a> con el mailto: -->
-        <p>Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
+        <p style="margin-top: 5px;">Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
+        <!-- Enlace para volver arriba con scroll suave -->
+        <p style="margin-top: 15px;">
+            <a href="#inicio" class="email-link" style="font-size: 0.85rem; opacity: 0.8;">↑ Volver arriba</a>
+        </p>
     </footer>
 </body>
 </html>
