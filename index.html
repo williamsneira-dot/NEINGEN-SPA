@@ -11,7 +11,9 @@
                 
         :root {
             --primary-color: #4b515d; 
-            --accent-color: #127d78; 
+            /* COLOR ACTUALIZADO SEGÚN EL LOGO (Obtenido en Paint: #1E8081) */
+            --accent-color: #1E8081; 
+            --accent-hover: #166566; /* Un tono ligeramente más oscuro para el efecto hover */
             --text-color: #334155;
             --grafito: #4b515d; 
             --bg-light: #f8fafc;
@@ -117,7 +119,7 @@
         }
 
         .btn:hover {
-            background-color: #0e5e5a;
+            background-color: var(--accent-hover);
         }
 
         .container {
@@ -166,7 +168,7 @@
         }
 
         footer p {
-            margin-bottom: 0.5rem; /* Da un respiro elegante entre cada línea del footer */
+            margin-bottom: 0.5rem;
         }
 
         .email-link {
@@ -218,31 +220,30 @@
     </header>
 
     <section class="hero">
-        <h2>Ingeniería aplicada para el futuro</h2>
+        <h2>Ingeniería Aplicada para el Futuro</h2>
         <p>Aportamos valor a tus proyectos a través de la industrialización, sostenibilidad e innovación.</p>
         <a href="#contacto" class="btn">Contáctanos</a>
     </section>
 
     <div class="container" id="servicios">
-        <h2 class="section-title">Nuestras áreas de especialidad</h2>
+        <h2 class="section-title">Nuestras Áreas de Especialidad</h2>
         <div class="services-grid">
             <div class="card">
-                <h3>Construcción industrializada</h3>
+                <h3>Construcción Industrializada</h3>
                 <p>Aplicamos metodologías y procesos avanzados para optimizar el ciclo de vida del proyecto, garantizando mayor eficiencia, calidad y reducción de plazos.</p>
             </div>
             <div class="card">
-                <h3>Gestión tecnológica</h3>
+                <h3>Gestión Tecnológica</h3>
                 <p>Integramos herramientas y soluciones tecnológicas de vanguardia en la ingeniería para maximizar el rendimiento y mejorar la toma de decisiones.</p>
             </div>
             <div class="card">
-                <h3>Innovación y sostenibilidad</h3>
+                <h3>Innovación y Sostenibilidad</h3>
                 <p>Desarrollamos estrategias integrales con un enfoque sostenible, asegurando un impacto positivo en el entorno y eficiencia operativa a largo plazo.</p>
             </div>
         </div>
     </div>
 
     <footer id="contacto">
-        <!-- Cada bloque de información ahora va en su propia línea controlada -->
         <p>&copy; 2026 NEINGEN SpA.</p>
         <p>Todos los derechos reservados.</p>
         <p>Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
