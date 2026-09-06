@@ -50,6 +50,18 @@
             display: block;
         }
 
+/* Agrega una transición suave a la imagen original */
+        .brand-container img {
+            height: 120px;
+            display: block;
+            transition: transform 0.3s ease; /* Esta es la línea clave */
+        }
+
+        /* Crea el efecto de movimiento al pasar el cursor */
+        .brand-container img:hover {
+            transform: scale(1.05); /* Crece un 5% de forma muy elegante */
+        }
+     
         .brand-container h1 {
             font-size: 1.75rem; /* Proporción del texto respecto a la imagen */
             color: var(--grafito);
