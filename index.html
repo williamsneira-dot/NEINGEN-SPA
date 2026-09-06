@@ -6,7 +6,7 @@
     <title>NEINGEN | Ingeniería Aplicada SpA</title>
     <style>
         html {
-            scroll-behavior: smooth; /* Hace que el viaje hacia arriba sea fluido */
+            scroll-behavior: smooth;
         }
                 
         :root {
@@ -40,13 +40,12 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
 
-        /* AJUSTES EXACTOS DE PROPORCIÓN DEL LOGO Y TEXTO */
         .brand-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             text-decoration: none;
-            gap: 6px; /* Separación precisa entre la 'N' y las letras */
+            gap: 6px;
         }
 
         .brand-container img {
@@ -178,7 +177,6 @@
             text-decoration: underline;
         }
 
-        /* CORRECCIÓN PARA CELULARES EN EL CÓDIGO ACTUAL */
         @media (max-width: 768px) {
             header {
                 flex-direction: column;
@@ -203,7 +201,6 @@
 </head>
 <body>
 
-    <!-- EL ID "inicio" AHORA ESTÁ AQUÍ ARRIBA EN EL HEADER -->
     <header id="inicio">
         <a href="#inicio" class="brand-container">
             <img src="IMG_4851.JPG" alt="Logo NEINGEN">
@@ -241,7 +238,8 @@
     </div>
 
     <footer id="contacto">
-        <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
+        <!-- Uso de &nbsp; para evitar que se divida de forma extraña en pantallas pequeñas -->
+        <p>&copy; 2026 NEINGEN SpA. Todos los&nbsp;derechos&nbsp;reservados.</p>
         <p style="margin-top: 5px;">Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
         <p style="margin-top: 15px;">
             <a href="#inicio" class="email-link" style="font-size: 0.85rem; opacity: 0.8;">↑ Volver arriba</a>
