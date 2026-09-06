@@ -49,33 +49,30 @@
             gap: 6px; /* Separación precisa entre la 'N' y las letras */
         }
 
-        /* Agrega una transición suave a la imagen original con el tamaño equilibrado de 120px */
         .brand-container img {
             height: 120px;
             display: block;
-            transition: transform 0.3s ease; /* Esta es la línea clave */
+            transition: transform 0.3s ease;
         }
 
-        /* Crea el efecto de movimiento al pasar el cursor */
         .brand-container img:hover {
-            transform: scale(1.05); /* Crece un 5% de forma muy elegante */
+            transform: scale(1.05);
         }
      
         .brand-container h1 {
-            font-size: 1.75rem; /* Proporción del texto respecto a la imagen */
+            font-size: 1.75rem;
             color: var(--grafito);
             margin: 0;
             line-height: 1;
             letter-spacing: 0.5px;
         }
 
-        /* CLASES PARA SEPARAR EL GROSOR DE LAS PALABRAS */
         .brand-bold {
-            font-weight: 700; /* NEINGEN muy destacado */
+            font-weight: 700;
         }
 
         .brand-light {
-            font-weight: 400; /* SpA delgado */
+            font-weight: 400;
         }
 
         nav a {
@@ -197,7 +194,7 @@
             }
 
             nav a {
-                margin: 0 0.75rem; /* Distribuye los enlaces ordenadamente abajo */
+                margin: 0 0.75rem;
                 font-size: 0.95rem;
             }
         }
@@ -206,10 +203,10 @@
 </head>
 <body>
 
-    <header>
+    <!-- EL ID "inicio" AHORA ESTÁ AQUÍ ARRIBA EN EL HEADER -->
+    <header id="inicio">
         <a href="#inicio" class="brand-container">
             <img src="IMG_4851.JPG" alt="Logo NEINGEN">
-            <!-- APLICACIÓN DE LAS CLASES BOLD Y LIGHT PARA REPLICAR LA IMAGEN -->
             <h1><span class="brand-bold">NEINGEN</span> <span class="brand-light">SpA</span></h1>
         </a>
         <nav>
@@ -219,7 +216,7 @@
         </nav>
     </header>
 
-    <section class="hero" id="inicio">
+    <section class="hero">
         <h2>Ingeniería Aplicada para el Futuro</h2>
         <p>Aportamos valor a tus proyectos a través de la Industrialización, Sostenibilidad e Innovación.</p>
         <a href="#contacto" class="btn">Contáctanos</a>
@@ -246,7 +243,6 @@
     <footer id="contacto">
         <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
         <p style="margin-top: 5px;">Contacto: <a href="mailto:contacto@neingen.cl" class="email-link">contacto@neingen.cl</a></p>
-        <!-- Enlace para volver arriba con scroll suave -->
         <p style="margin-top: 15px;">
             <a href="#inicio" class="email-link" style="font-size: 0.85rem; opacity: 0.8;">↑ Volver arriba</a>
         </p>
