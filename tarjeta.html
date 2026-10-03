@@ -1,5 +1,3 @@
-Para adaptar tu tarjeta digital de NEINGEN con la misma estructura ejecutiva, limpia y moderna que diseñamos para María Blender, mantendremos tus datos oficiales (Gerente General, Ingeniero Civil Industrial, Mg. Gestión Tecnológica, Socio Profesional CCI, tus correos, teléfonos y el logotipo de NEINGEN).
-Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archivo:
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,16 +42,20 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
             position: relative;
         }
 
-        /* Línea corporativa superior */
+        /* Línea superior corporativa */
         .brand-bar {
+            display: flex;
             height: 5px;
             width: 100%;
-            background: linear-gradient(90deg, #1e293b, #0f766e, #25d366);
             border-radius: 10px;
             margin-bottom: 16px;
+            overflow: hidden;
         }
+        .brand-bar .b1 { background: #1e293b; flex: 1; }
+        .brand-bar .b2 { background: #0f766e; flex: 1; }
+        .brand-bar .b3 { background: #25d366; flex: 1; }
 
-        /* Tarjeta Impresa Simulada */
+        /* Tarjeta interna */
         .preview-card {
             border: 1px solid #e5e7eb;
             border-radius: 14px;
@@ -73,21 +75,21 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
         }
 
         .preview-info h2 {
-            font-size: 18px;
+            font-size: 19px;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 2px;
         }
 
         .preview-info h3 {
-            font-size: 12px;
+            font-size: 13px;
             font-weight: 600;
             color: #4b5563;
             margin-bottom: 6px;
         }
 
         .preview-info p {
-            font-size: 10px;
+            font-size: 11px;
             color: var(--text-muted);
             line-height: 1.4;
             margin-bottom: 8px;
@@ -123,14 +125,14 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
         }
 
         .preview-logo .sub {
-            font-size: 7px;
+            font-size: 8px;
             color: #38bdf8;
             text-transform: uppercase;
             font-weight: 700;
             margin-top: 2px;
         }
 
-        /* Botones de Acción */
+        /* Botones de acción */
         .actions {
             display: flex;
             flex-direction: column;
@@ -176,7 +178,7 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
             color: #64748b;
         }
 
-        /* Código QR */
+        /* Sección Código QR */
         .qr-section {
             margin-top: 20px;
             padding-top: 16px;
@@ -220,9 +222,13 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
 
 <div class="main-container">
 
-    <div class="brand-bar"></div>
+    <div class="brand-bar">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+    </div>
 
-    <!-- Módulo de Tarjeta Ejecutiva -->
+    <!-- Bloque de Identificación -->
     <div class="preview-card">
         <div class="preview-info">
             <h2>Williams Neira Garrido</h2>
@@ -240,15 +246,15 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
         </div>
     </div>
 
-    <!-- Botones de Acción -->
+    <!-- Botones de Interacción -->
     <div class="actions">
 
         <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">
             <i class="fas fa-address-card"></i> Guardar en Contactos
         </a>
 
-        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%2520tarjeta%20digital." target="_blank" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Mensaje por WhatsApp
         </a>
 
         <div class="btn-grid">
@@ -256,7 +262,7 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
                 <i class="fas fa-envelope"></i> Correo
             </a>
             <a href="https://neingen.cl" target="_blank" class="btn btn-sub">
-                <i class="fas fa-globe"></i> Web
+                <i class="fas fa-globe"></i> Sitio Web
             </a>
             <a href="https://www.linkedin.com" target="_blank" class="btn btn-sub">
                 <i class="fab fa-linkedin"></i> LinkedIn
@@ -269,7 +275,7 @@ Aquí tienes el código HTML completo listo para copiar y reemplazar en tu archi
 
     <!-- Código QR -->
     <div class="qr-section">
-        <p class="qr-title">Escanear para compartir</p>
+        <p class="qr-title">Escanear para Compartir</p>
         <div class="qr-box">
             <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://neingen.cl/tarjeta.html" alt="QR Williams Neira">
         </div>
