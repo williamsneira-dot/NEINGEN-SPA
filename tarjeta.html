@@ -27,102 +27,95 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            overflow: hidden; /* Evita cualquier barra de scroll general */
-            padding: 8px;
+            min-height: 100vh;
+            padding: 16px;
         }
 
         .main-container {
             width: 100%;
-            max-width: 380px;
-            max-height: 98vh;
+            max-width: 420px;
             background: var(--card-bg);
-            border-radius: 16px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             overflow: hidden;
-            padding: 12px 14px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            padding: 20px;
         }
 
         /* Línea superior corporativa */
         .brand-bar {
             display: flex;
-            height: 4px;
+            height: 5px;
             width: 100%;
             border-radius: 10px;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
             overflow: hidden;
-            flex-shrink: 0;
         }
         .brand-bar .b1 { background: #1e293b; flex: 1; }
         .brand-bar .b2 { background: #0f766e; flex: 1; }
         .brand-bar .b3 { background: #25d366; flex: 1; }
 
-        /* Tarjeta de perfil con Logo a la derecha superior */
+        /* Tarjeta de perfil con Logo Grande a la derecha superior */
         .preview-card {
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 10px 12px;
+            border-radius: 14px;
+            padding: 16px;
             background: #fafafa;
-            margin-bottom: 8px;
+            margin-bottom: 16px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
         }
 
         .preview-info {
             text-align: left;
             flex: 1;
-            padding-right: 8px;
+            padding-right: 10px;
         }
 
         .preview-info h2 {
-            font-size: 16px;
+            font-size: 19px;
             font-weight: 700;
             color: var(--text-dark);
-            margin-bottom: 2px;
-            line-height: 1.2;
+            margin-bottom: 3px;
+            line-height: 1.25;
         }
 
         /* "Gerente General" en gris formal */
         .preview-info h3 {
-            font-size: 11.5px;
+            font-size: 13px;
             font-weight: 600;
             color: #334155;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         .preview-info p {
-            font-size: 10px;
+            font-size: 11.5px;
             color: var(--text-muted);
-            line-height: 1.3;
-            margin-bottom: 6px;
+            line-height: 1.4;
+            margin-bottom: 10px;
         }
 
         .preview-info .contact-details {
-            font-size: 10px;
+            font-size: 11.5px;
             color: #374151;
             font-weight: 500;
-            line-height: 1.4;
+            line-height: 1.5;
         }
 
-        /* Logo superior derecho nítido y grande */
+        /* Logo superior derecho ampliado */
         .card-logo-right {
-            width: 90px;
+            width: 130px;
             flex-shrink: 0;
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
-            padding-top: 2px;
         }
 
         .card-logo-right img {
             width: 100%;
             height: auto;
-            max-height: 65px;
+            max-height: 90px;
             object-fit: contain;
         }
 
@@ -130,19 +123,19 @@
         .actions {
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 10px;
         }
 
         .btn {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            padding: 8px 10px;
-            border-radius: 8px;
+            gap: 10px;
+            padding: 12px 14px;
+            border-radius: 12px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 12.5px;
+            font-size: 14px;
             transition: all 0.2s ease;
         }
 
@@ -159,14 +152,14 @@
         .btn-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6px;
+            gap: 10px;
         }
 
         .btn-sub {
             background-color: #f1f5f9;
             color: #334155;
-            font-size: 11.5px;
-            padding: 7px 8px;
+            font-size: 13px;
+            padding: 10px 12px;
         }
 
         .btn-sub i {
@@ -175,28 +168,28 @@
 
         /* Sección Código QR */
         .qr-section {
-            margin-top: 6px;
-            padding-top: 6px;
+            margin-top: 16px;
+            padding-top: 12px;
             border-top: 1px solid #f1f5f9;
             text-align: center;
         }
 
         .qr-title {
-            font-size: 8.5px;
+            font-size: 10px;
             font-weight: 700;
             color: var(--text-muted);
-            letter-spacing: 0.8px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            margin-bottom: 4px;
+            margin-bottom: 8px;
         }
 
         .qr-box {
-            width: 75px;
-            height: 75px;
+            width: 100px;
+            height: 100px;
             margin: 0 auto;
             border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 3px;
+            border-radius: 10px;
+            padding: 5px;
             background: #ffffff;
         }
 
@@ -207,8 +200,8 @@
 
         .footer {
             text-align: center;
-            margin-top: 4px;
-            font-size: 8.5px;
+            margin-top: 10px;
+            font-size: 10px;
             color: var(--text-muted);
         }
     </style>
@@ -224,16 +217,16 @@
         <div class="b3"></div>
     </div>
 
-    <!-- Bloque de Identificación con Logo superior derecho -->
+    <!-- Bloque de Identificación con Logo Grande a la derecha -->
     <div class="preview-card">
         <div class="preview-info">
             <h2>Williams Neira Garrido</h2>
             <h3>Gerente General</h3>
             <p>Ingeniero Civil Industrial<br>Magíster en Gestión Tecnológica<br>Socio Profesional CCI</p>
             <div class="contact-details">
-                <div><i class="fas fa-phone" style="width: 12px; color:#64748b;"></i> +56 9 8767 6686</div>
-                <div><i class="fas fa-envelope" style="width: 12px; color:#64748b;"></i> williams.neira@neingen.cl</div>
-                <div><i class="fas fa-globe" style="width: 12px; color:#64748b;"></i> www.neingen.cl</div>
+                <div><i class="fas fa-phone" style="width: 14px; color:#64748b;"></i> +56 9 8767 6686</div>
+                <div><i class="fas fa-envelope" style="width: 14px; color:#64748b;"></i> williams.neira@neingen.cl</div>
+                <div><i class="fas fa-globe" style="width: 14px; color:#64748b;"></i> www.neingen.cl</div>
             </div>
         </div>
         <div class="card-logo-right">
