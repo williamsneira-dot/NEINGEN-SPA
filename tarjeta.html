@@ -1,289 +1,277 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Williams Neira Garrido - Tarjeta Digital</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-dark: #1e293b;
-            --accent-green: #25d366;
-            --bg-color: #f3f4f6;
-            --card-bg: #ffffff;
-            --text-dark: #1f2937;
-            --text-muted: #6b7280;
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Williams Neira Garrido - Tarjeta Digital</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1e293b;
+            --accent-green: #25d366;
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --text-dark: #1f2937;
+            --text-muted: #6b7280;
+        }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
 
-        body {
-            background-color: var(--bg-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 16px;
-        }
+        body {
+            background-color: var(--bg-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 16px;
+        }
 
-        .main-container {
-            width: 100%;
-            max-width: 420px;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
-            overflow: hidden;
-            padding: 20px;
-            position: relative;
-        }
+        .main-container {
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            overflow: hidden;
+            padding: 20px;
+            position: relative;
+        }
 
-        /* Línea superior corporativa */
-        .brand-bar {
-            display: flex;
-            height: 5px;
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 16px;
-            overflow: hidden;
-        }
-        .brand-bar .b1 { background: #1e293b; flex: 1; }
-        .brand-bar .b2 { background: #0f766e; flex: 1; }
-        .brand-bar .b3 { background: #25d366; flex: 1; }
+        /* Línea superior corporativa */
+        .brand-bar {
+            display: flex;
+            height: 5px;
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            overflow: hidden;
+        }
+        .brand-bar .b1 { background: #1e293b; flex: 1; }
+        .brand-bar .b2 { background: #0f766e; flex: 1; }
+        .brand-bar .b3 { background: #25d366; flex: 1; }
 
-        /* Tarjeta interna */
-        .preview-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 14px;
-            padding: 18px 16px;
-            background: #fafafa;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
-        }
+        /* Tarjeta interna estilo Javiera */
+        .preview-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 14px;
+            padding: 18px 16px;
+            background: #fafafa;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+        }
 
-        .preview-info {
-            text-align: left;
-            flex: 1;
-            padding-right: 12px;
-        }
+        .preview-info {
+            text-align: left;
+            flex: 1;
+            padding-right: 12px;
+        }
 
-        .preview-info h2 {
-            font-size: 19px;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 2px;
-        }
+        .preview-info h2 {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 2px;
+        }
 
-        .preview-info h3 {
-            font-size: 13px;
-            font-weight: 600;
-            color: #4b5563;
-            margin-bottom: 6px;
-        }
+        .preview-info h3 {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0f766e;
+            margin-bottom: 6px;
+        }
 
-        .preview-info p {
-            font-size: 11px;
-            color: var(--text-muted);
-            line-height: 1.4;
-            margin-bottom: 8px;
-        }
+        .preview-info p {
+            font-size: 11px;
+            color: var(--text-muted);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
 
-        .preview-info .contact-details {
-            font-size: 11px;
-            color: #374151;
-            font-weight: 500;
-            line-height: 1.5;
-        }
+        .preview-info .contact-details {
+            font-size: 11px;
+            color: #374151;
+            font-weight: 500;
+            line-height: 1.6;
+        }
 
-        .preview-logo {
-            width: 75px;
-            height: 75px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #1e293b, #0f172a);
-            color: #ffffff;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border: 2px solid #e2e8f0;
-            flex-shrink: 0;
-        }
+        /* Contenedor del Logo Transparente en la tarjeta */
+        .preview-logo-img {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
 
-        .preview-logo .initials {
-            font-size: 20px;
-            font-weight: 800;
-            letter-spacing: 1px;
-            color: #ffffff;
-        }
+        .preview-logo-img img {
+            width: 100%;
+            height: auto;
+            max-height: 80px;
+            object-fit: contain;
+        }
 
-        .preview-logo .sub {
-            font-size: 8px;
-            color: #38bdf8;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-top: 2px;
-        }
+        /* Botones de acción */
+        .actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-        /* Botones de acción */
-        .actions {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 13px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.2s ease;
+        }
 
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 13px 16px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            transition: all 0.2s ease;
-        }
+        .btn-main {
+            background-color: var(--primary-dark);
+            color: #ffffff;
+        }
 
-        .btn-main {
-            background-color: var(--primary-dark);
-            color: #ffffff;
-        }
+        .btn-whatsapp {
+            background-color: var(--accent-green);
+            color: #ffffff;
+        }
 
-        .btn-whatsapp {
-            background-color: var(--accent-green);
-            color: #ffffff;
-        }
+        .btn-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
 
-        .btn-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
+        .btn-sub {
+            background-color: #f1f5f9;
+            color: #334155;
+            font-size: 14px;
+        }
 
-        .btn-sub {
-            background-color: #f1f5f9;
-            color: #334155;
-            font-size: 14px;
-        }
+        .btn-sub i {
+            color: #64748b;
+        }
 
-        .btn-sub i {
-            color: #64748b;
-        }
+        /* Sección Código QR */
+        .qr-section {
+            margin-top: 20px;
+            padding-top: 16px;
+            border-top: 1px solid #f1f5f9;
+            text-align: center;
+        }
 
-        /* Sección Código QR */
-        .qr-section {
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid #f1f5f9;
-            text-align: center;
-        }
+        .qr-title {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
 
-        .qr-title {
-            font-size: 11px;
-            font-weight: 700;
-            color: var(--text-muted);
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            margin-bottom: 10px;
-        }
+        .qr-box {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 6px;
+            background: #ffffff;
+        }
 
-        .qr-box {
-            width: 120px;
-            height: 120px;
-            margin: 0 auto;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 6px;
-            background: #ffffff;
-        }
+        .qr-box img {
+            width: 100%;
+            height: 100%;
+        }
 
-        .qr-box img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 12px;
-            font-size: 11px;
-            color: var(--text-muted);
-        }
-    </style>
+        .footer {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+    </style>
 </head>
 <body>
 
 <div class="main-container">
 
-    <div class="brand-bar">
-        <div class="b1"></div>
-        <div class="b2"></div>
-        <div class="b3"></div>
-    </div>
+    <!-- Línea superior corporativa -->
+    <div class="brand-bar">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+    </div>
 
-    <!-- Bloque de Identificación -->
-    <div class="preview-card">
-        <div class="preview-info">
-            <h2>Williams Neira Garrido</h2>
-            <h3>Gerente General</h3>
-            <p>Ingeniero Civil Industrial | Mg. Gestión Tecnológica<br>Socio Profesional CCI (Consejo de Construcción Industrializada)</p>
-            <div class="contact-details">
-                <div><i class="fas fa-phone" style="width: 14px; color:#64748b;"></i> +56 9 8767 6686</div>
-                <div><i class="fas fa-envelope" style="width: 14px; color:#64748b;"></i> williams.neira@neingen.cl</div>
-                <div><i class="fas fa-globe" style="width: 14px; color:#64748b;"></i> www.neingen.cl</div>
-            </div>
-        </div>
-        <div class="preview-logo">
-            <span class="initials">WNG</span>
-            <span class="sub">NEINGEN</span>
-        </div>
-    </div>
+    <!-- Bloque de Identificación estilo Javiera -->
+    <div class="preview-card">
+        <div class="preview-info">
+            <h2>Williams Neira Garrido</h2>
+            <h3>Gerente General</h3>
+            <p>Ingeniero Civil Industrial | Mg. Gestión Tecnológica<br>Socio Profesional CCI (Consejo de Construcción Industrializada)</p>
+            <div class="contact-details">
+                <div><i class="fas fa-phone" style="width: 14px; color:#64748b;"></i> +56 9 8767 6686</div>
+                <div><i class="fas fa-envelope" style="width: 14px; color:#64748b;"></i> williams.neira@neingen.cl</div>
+                <div><i class="fas fa-globe" style="width: 14px; color:#64748b;"></i> www.neingen.cl</div>
+            </div>
+        </div>
+        <!-- Logo transparente neingen.png incorporado -->
+        <div class="preview-logo-img">
+            <img src="neingen.png" alt="NEINGEN SpA Logo">
+        </div>
+    </div>
 
-    <!-- Botones de Interacción -->
-    <div class="actions">
+    <!-- Botones de Interacción -->
+    <div class="actions">
 
-        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">
-            <i class="fas fa-address-card"></i> Guardar en Contactos
-        </a>
+        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">
+            <i class="fas fa-address-card"></i> Guardar en Contactos
+        </a>
 
-        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Mensaje por WhatsApp
-        </a>
+        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">
+            <i class="fab fa-whatsapp"></i> Mensaje por WhatsApp
+        </a>
 
-        <div class="btn-grid">
-            <a href="mailto:williams.neira@neingen.cl" class="btn btn-sub">
-                <i class="fas fa-envelope"></i> Correo
-            </a>
-            <a href="https://neingen.cl" target="_blank" class="btn btn-sub">
-                <i class="fas fa-globe"></i> Sitio Web
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" class="btn btn-sub">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="tel:+56987676686" class="btn btn-sub">
-                <i class="fas fa-phone"></i> Llamar
-            </a>
-        </div>
-    </div>
+        <div class="btn-grid">
+            <a href="mailto:williams.neira@neingen.cl" class="btn btn-sub">
+                <i class="fas fa-envelope"></i> Correo
+            </a>
+            <a href="https://neingen.cl" target="_blank" class="btn btn-sub">
+                <i class="fas fa-globe"></i> Sitio Web
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-sub">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+            <a href="tel:+56987676686" class="btn btn-sub">
+                <i class="fas fa-phone"></i> Llamar
+            </a>
+        </div>
+    </div>
 
-    <!-- Código QR -->
-    <div class="qr-section">
-        <p class="qr-title">Escanear para Compartir</p>
-        <div class="qr-box">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://neingen.cl/tarjeta.html" alt="QR Williams Neira">
-        </div>
-    </div>
+    <!-- Código QR -->
+    <div class="qr-section">
+        <p class="qr-title">Escanear para Compartir</p>
+        <div class="qr-box">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://neingen.cl/tarjeta.html" alt="QR Williams Neira">
+        </div>
+    </div>
 
-    <div class="footer">
-        © neingen.cl
-    </div>
+    <div class="footer">
+        © neingen.cl
+    </div>
 
 </div>
 
