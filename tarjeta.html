@@ -27,19 +27,23 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
+            overflow: hidden; /* Evita cualquier barra de scroll general */
             padding: 8px;
         }
 
         .main-container {
             width: 100%;
             max-width: 380px;
+            max-height: 98vh;
             background: var(--card-bg);
-            border-radius: 18px;
+            border-radius: 16px;
             box-shadow: 0 8px 20px rgba(0,0,0,0.08);
             overflow: hidden;
             padding: 12px 14px;
-            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         /* Línea superior corporativa */
@@ -48,24 +52,25 @@
             height: 4px;
             width: 100%;
             border-radius: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             overflow: hidden;
+            flex-shrink: 0;
         }
         .brand-bar .b1 { background: #1e293b; flex: 1; }
         .brand-bar .b2 { background: #0f766e; flex: 1; }
         .brand-bar .b3 { background: #25d366; flex: 1; }
 
-        /* Tarjeta de perfil con Logo en la esquina superior derecha */
+        /* Tarjeta de perfil con Logo a la derecha superior */
         .preview-card {
             border: 1px solid #e5e7eb;
             border-radius: 12px;
-            padding: 12px;
+            padding: 10px 12px;
             background: #fafafa;
-            margin-bottom: 10px;
-            box-shadow: inset 0 1px 3px rgba(0,0,0,0.02);
+            margin-bottom: 8px;
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
         }
 
         .preview-info {
@@ -75,48 +80,49 @@
         }
 
         .preview-info h2 {
-            font-size: 16.5px;
+            font-size: 16px;
             font-weight: 700;
             color: var(--text-dark);
             margin-bottom: 2px;
+            line-height: 1.2;
         }
 
         /* "Gerente General" en gris formal */
         .preview-info h3 {
-            font-size: 12px;
+            font-size: 11.5px;
             font-weight: 600;
             color: #334155;
             margin-bottom: 6px;
         }
 
         .preview-info p {
-            font-size: 10.5px;
+            font-size: 10px;
             color: var(--text-muted);
-            line-height: 1.35;
+            line-height: 1.3;
             margin-bottom: 6px;
         }
 
         .preview-info .contact-details {
-            font-size: 10.5px;
+            font-size: 10px;
             color: #374151;
             font-weight: 500;
             line-height: 1.4;
         }
 
-        /* Logo superior derecho más grande */
+        /* Logo superior derecho nítido y grande */
         .card-logo-right {
-            width: 85px;
-            height: auto;
+            width: 90px;
             flex-shrink: 0;
             display: flex;
             justify-content: flex-end;
             align-items: flex-start;
+            padding-top: 2px;
         }
 
         .card-logo-right img {
             width: 100%;
-            max-width: 85px;
             height: auto;
+            max-height: 65px;
             object-fit: contain;
         }
 
@@ -132,11 +138,11 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 9px 12px;
-            border-radius: 9px;
+            padding: 8px 10px;
+            border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 13px;
+            font-size: 12.5px;
             transition: all 0.2s ease;
         }
 
@@ -159,8 +165,8 @@
         .btn-sub {
             background-color: #f1f5f9;
             color: #334155;
-            font-size: 12px;
-            padding: 8px 10px;
+            font-size: 11.5px;
+            padding: 7px 8px;
         }
 
         .btn-sub i {
@@ -169,14 +175,14 @@
 
         /* Sección Código QR */
         .qr-section {
-            margin-top: 8px;
+            margin-top: 6px;
             padding-top: 6px;
             border-top: 1px solid #f1f5f9;
             text-align: center;
         }
 
         .qr-title {
-            font-size: 9px;
+            font-size: 8.5px;
             font-weight: 700;
             color: var(--text-muted);
             letter-spacing: 0.8px;
@@ -185,12 +191,12 @@
         }
 
         .qr-box {
-            width: 85px;
-            height: 85px;
+            width: 75px;
+            height: 75px;
             margin: 0 auto;
             border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 4px;
+            border-radius: 6px;
+            padding: 3px;
             background: #ffffff;
         }
 
@@ -201,8 +207,8 @@
 
         .footer {
             text-align: center;
-            margin-top: 6px;
-            font-size: 9px;
+            margin-top: 4px;
+            font-size: 8.5px;
             color: var(--text-muted);
         }
     </style>
@@ -218,16 +224,16 @@
         <div class="b3"></div>
     </div>
 
-    <!-- Bloque de Identificación con Logo a la derecha -->
+    <!-- Bloque de Identificación con Logo superior derecho -->
     <div class="preview-card">
         <div class="preview-info">
             <h2>Williams Neira Garrido</h2>
             <h3>Gerente General</h3>
             <p>Ingeniero Civil Industrial<br>Magíster en Gestión Tecnológica<br>Socio Profesional CCI</p>
             <div class="contact-details">
-                <div><i class="fas fa-phone" style="width: 13px; color:#64748b;"></i> +56 9 8767 6686</div>
-                <div><i class="fas fa-envelope" style="width: 13px; color:#64748b;"></i> williams.neira@neingen.cl</div>
-                <div><i class="fas fa-globe" style="width: 13px; color:#64748b;"></i> www.neingen.cl</div>
+                <div><i class="fas fa-phone" style="width: 12px; color:#64748b;"></i> +56 9 8767 6686</div>
+                <div><i class="fas fa-envelope" style="width: 12px; color:#64748b;"></i> williams.neira@neingen.cl</div>
+                <div><i class="fas fa-globe" style="width: 12px; color:#64748b;"></i> www.neingen.cl</div>
             </div>
         </div>
         <div class="card-logo-right">
