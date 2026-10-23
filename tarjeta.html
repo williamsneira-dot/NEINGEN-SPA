@@ -37,25 +37,81 @@
             justify-content: space-between;
         }
         
-        /* Barra de 3 segmentos iguales: Gris Grafito, Verde Oscuro, Verde Claro */
+        /* Barra tricolor corporativa */
         .top-bar { display: flex; height: 4px; width: 100%; margin: 8px 0 10px 0; border-radius: 3px; overflow: hidden; flex-shrink: 0; }
-        .bar-1 { background-color: #1e293b; flex: 1; } /* Gris Grafito Corporativo */
-        .bar-2 { background-color: #0f766e; flex: 1; } /* Verde Oscuro Corporativo */
-        .bar-3 { background-color: #25d366; flex: 1; } /* Verde Claro Corporativo */
+        .bar-1 { background-color: #1e293b; flex: 1; }
+        .bar-2 { background-color: #0f766e; flex: 1; }
+        .bar-3 { background-color: #25d366; flex: 1; }
         
-        .card-header { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 12px 14px; position: relative; margin-bottom: 8px; }
+        /* Contenedor del encabezado optimizado */
+        .card-header { 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 14px; 
+            padding: 12px 14px; 
+            position: relative; 
+            margin-bottom: 8px; 
+        }
         
-        .logo-wrapper { display: flex; justify-content: flex-end; margin-bottom: 6px; }
-        .logo-img { max-width: 120px; height: auto; display: block; object-fit: contain; }
+        /* Isotipo n.png alineado arriba a la derecha */
+        .logo-wrapper { 
+            position: absolute;
+            top: 12px;
+            right: 14px;
+        }
+
+        .logo-img { 
+            width: 45px; 
+            height: auto; 
+            display: block; 
+            object-fit: contain; 
+        }
         
-        h1 { font-size: 1.2rem; color: #0f172a; font-weight: 700; margin-bottom: 2px; }
-        .subtitle { font-size: 0.82rem; color: #334155; font-weight: 600; line-height: 1.2; margin-bottom: 4px; }
-        .description { font-size: 0.72rem; color: #64748b; line-height: 1.35; margin-bottom: 8px; }
+        /* Textos sin espacios vacíos */
+        h1 { 
+            font-size: 1.15rem; 
+            color: #0f172a; 
+            font-weight: 700; 
+            margin-bottom: 2px;
+            padding-right: 45px; /* Espacio para no chocar con el logo n.png */
+        }
+
+        .subtitle { 
+            font-size: 0.82rem; 
+            color: #334155; 
+            font-weight: 600; 
+            line-height: 1.2; 
+            margin-bottom: 6px; 
+        }
+
+        .description { 
+            font-size: 0.72rem; 
+            color: #64748b; 
+            line-height: 1.35; 
+            margin-bottom: 8px; 
+        }
         
-        .contact-info { display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem; border-top: 1px solid #e2e8f0; padding-top: 8px; }
-        .contact-info a { color: #334155; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .contact-info { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 4px; 
+            font-size: 0.78rem; 
+            border-top: 1px solid #e2e8f0; 
+            padding-top: 8px; 
+        }
+
+        .contact-info a { 
+            color: #334155; 
+            text-decoration: none; 
+            font-weight: 500; 
+            display: flex; 
+            align-items: center; 
+            gap: 6px; 
+        }
+
         .contact-icon { font-size: 0.85rem; opacity: 0.8; }
         
+        /* Botones de acción */
         .btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 10px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-decoration: none; margin-bottom: 6px; border: none; }
         .btn-main { background: #1e293b; color: #ffffff; }
         .btn-whatsapp { background: #25d366; color: #ffffff; }
@@ -78,16 +134,18 @@
             <div class="bar-3"></div>
         </div>
 
-        <!-- Encabezado de Tarjeta con Logo superior derecho -->
+        <!-- Encabezado de Tarjeta equilibrado -->
         <div class="card-header">
+            <!-- Isotipo 'N' compacto en la esquina superior derecha -->
             <div class="logo-wrapper">
-                <img src="neingenspa.png" alt="NEINGEN SpA" class="logo-img">
+                <img src="n.png" alt="NEINGEN N Logo" class="logo-img">
             </div>
 
             <h1>Williams Neira Garrido</h1>
             <div class="subtitle">Gerente General | NEINGEN SpA</div>
             <div class="description">
-                Ingeniero Civil Industrial | Mg. Gestión Tecnológica<br>
+                Ingeniero Civil Industrial<br>
+                Magíster en Gestión Tecnológica<br>
                 Socio Profesional CCI
             </div>
             
@@ -98,12 +156,12 @@
             </div>
         </div>
 
-        <!-- Botones de Acción Principal -->
+        <!-- Botones Principales -->
         <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">📇 Guardar en Contactos</a>
         
         <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">💬 Mensaje por WhatsApp</a>
 
-        <!-- Matriz de Acciones Secundarias -->
+        <!-- Botones Secundarios -->
         <div class="grid-btns">
             <a href="mailto:williams.neira@neingen.cl" class="btn btn-secondary">✉️ Correo</a>
             <a href="https://neingen.cl" target="_blank" class="btn btn-secondary">🌐 Sitio Web</a>
