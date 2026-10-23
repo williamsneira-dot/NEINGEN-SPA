@@ -4,300 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Williams Neira Garrido - Tarjeta Digital</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-dark: #1e293b;
-            --accent-green: #25d366;
-            --bg-color: #f3f4f6;
-            --card-bg: #ffffff;
-            --text-dark: #1f2937;
-            --text-muted: #6b7280;
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+        }
+        
+        body { 
+            background-color: #f5f5f7; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            height: 100dvh; 
+            padding: 8px; 
+            overflow: hidden; 
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--bg-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden; /* Evita el scroll vertical */
-            padding: 8px;
-        }
-
-        .main-container {
-            width: 100%;
-            max-width: 380px;
-            max-height: 98vh;
-            background: var(--card-bg);
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            overflow: hidden;
-            padding: 14px 16px;
+        .container { 
+            background: #ffffff; 
+            width: 100%; 
+            max-width: 380px; 
+            max-height: 100dvh;
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+            padding: 0 16px 14px 16px; 
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
-
-        /* Línea tricolor superior */
-        .brand-bar {
-            display: flex;
-            height: 4px;
-            width: 100%;
-            border-radius: 10px;
-            margin-bottom: 8px;
-            overflow: hidden;
-            flex-shrink: 0;
-        }
-        .brand-bar .b1 { background: #1e293b; flex: 1; }
-        .brand-bar .b2 { background: #0f766e; flex: 1; }
-        .brand-bar .b3 { background: #25d366; flex: 1; }
-
-        /* Tarjeta interna idéntica a Javiera */
-        .preview-card {
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 12px 14px;
-            background: #fafafa;
-            margin-bottom: 8px;
-            position: relative;
-            box-shadow: inset 0 1px 2px rgba(0,0,0,0.02);
-        }
-
-        /* Logo en la esquina superior derecha */
-        .top-right-logo {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 4px;
-        }
-
-        .top-right-logo img {
-            max-width: 100px;
-            height: auto;
-            max-height: 45px;
-            object-fit: contain;
-        }
-
-        .preview-info {
-            text-align: left;
-        }
-
-        .preview-info h2 {
-            font-size: 17px;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 2px;
-        }
-
-        /* Cargo igual que el de Javiera en gris formal */
-        .preview-info .role {
-            font-size: 11.5px;
-            font-weight: 600;
-            color: #374151;
-            margin-bottom: 3px;
-        }
-
-        .preview-info .degree {
-            font-size: 10px;
-            color: var(--text-muted);
-            line-height: 1.3;
-            margin-bottom: 10px;
-            padding-bottom: 8px;
-            border-bottom: 1px dashed #e2e8f0;
-        }
-
-        .preview-info .contact-details {
-            font-size: 10.5px;
-            color: #374151;
-            font-weight: 500;
-            line-height: 1.5;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 2px;
-        }
-
-        .contact-item i {
-            width: 14px;
-            color: #1e293b;
-        }
-
-        /* Botones de acción */
-        .actions {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 9px 12px;
-            border-radius: 9px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 13px;
-            transition: all 0.2s ease;
-        }
-
-        .btn-main {
-            background-color: var(--primary-dark);
-            color: #ffffff;
-        }
-
-        .btn-whatsapp {
-            background-color: var(--accent-green);
-            color: #ffffff;
-        }
-
-        .btn-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6px;
-        }
-
-        .btn-sub {
-            background-color: #f1f5f9;
-            color: #334155;
-            font-size: 12px;
-            padding: 8px;
-        }
-
-        .btn-sub i {
-            color: #64748b;
-        }
-
-        /* Sección Código QR */
-        .qr-section {
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px solid #f1f5f9;
-            text-align: center;
-        }
-
-        .qr-title {
-            font-size: 8.5px;
-            font-weight: 700;
-            color: var(--text-muted);
-            letter-spacing: 0.8px;
-            text-transform: uppercase;
-            margin-bottom: 4px;
-        }
-
-        .qr-box {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 4px;
-            background: #ffffff;
-        }
-
-        .qr-box img {
-            width: 100%;
-            height: 100%;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 4px;
-            font-size: 8.5px;
-            color: var(--text-muted);
-        }
+        
+        /* Barra de 3 segmentos iguales: Gris Grafito, Verde Oscuro, Verde Claro */
+        .top-bar { display: flex; height: 4px; width: 100%; margin: 8px 0 10px 0; border-radius: 3px; overflow: hidden; flex-shrink: 0; }
+        .bar-1 { background-color: #1e293b; flex: 1; } /* Gris Grafito Corporativo */
+        .bar-2 { background-color: #0f766e; flex: 1; } /* Verde Oscuro Corporativo */
+        .bar-3 { background-color: #25d366; flex: 1; } /* Verde Claro Corporativo */
+        
+        .card-header { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 14px; padding: 12px 14px; position: relative; margin-bottom: 8px; }
+        
+        .logo-wrapper { display: flex; justify-content: flex-end; margin-bottom: 6px; }
+        .logo-img { max-width: 120px; height: auto; display: block; object-fit: contain; }
+        
+        h1 { font-size: 1.2rem; color: #0f172a; font-weight: 700; margin-bottom: 2px; }
+        .subtitle { font-size: 0.82rem; color: #334155; font-weight: 600; line-height: 1.2; margin-bottom: 4px; }
+        .description { font-size: 0.72rem; color: #64748b; line-height: 1.35; margin-bottom: 8px; }
+        
+        .contact-info { display: flex; flex-direction: column; gap: 4px; font-size: 0.78rem; border-top: 1px solid #e2e8f0; padding-top: 8px; }
+        .contact-info a { color: #334155; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 6px; }
+        .contact-icon { font-size: 0.85rem; opacity: 0.8; }
+        
+        .btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 10px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-decoration: none; margin-bottom: 6px; border: none; }
+        .btn-main { background: #1e293b; color: #ffffff; }
+        .btn-whatsapp { background: #25d366; color: #ffffff; }
+        .grid-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+        .btn-secondary { background: #f1f5f9; color: #1e293b; font-size: 0.78rem; padding: 8px; border: 1px solid #e2e8f0; margin-bottom: 0; }
+        
+        .qr-section { text-align: center; border-top: 1px solid #f1f5f9; padding-top: 8px; }
+        .qr-title { font-size: 0.62rem; color: #64748b; letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; }
+        .qr-box { background: white; padding: 6px; border: 1px solid #e2e8f0; border-radius: 12px; display: inline-block; }
+        .qr-box img { width: 95px; height: 95px; display: block; }
+        .footer-text { font-size: 0.62rem; color: #94a3b8; margin-top: 4px; }
     </style>
 </head>
 <body>
-
-<div class="main-container">
-
-    <!-- Línea tricolor superior -->
-    <div class="brand-bar">
-        <div class="b1"></div>
-        <div class="b2"></div>
-        <div class="b3"></div>
-    </div>
-
-    <!-- Tarjeta estilo Javiera -->
-    <div class="preview-card">
-        <!-- Logo transparente arriba a la derecha -->
-        <div class="top-right-logo">
-            <img src="neingenspa.png" alt="NEINGEN SpA Logo">
+    <div class="container">
+        <!-- Barra tricolor superior -->
+        <div class="top-bar">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
         </div>
 
-        <div class="preview-info">
-            <h2>Williams Neira Garrido</h2>
-            <div class="role">Gerente General | NEINGEN SpA</div>
-            <div class="degree">Ingeniero Civil Industrial | Mg. Gestión Tecnológica<br>Socio Profesional CCI</div>
+        <!-- Encabezado de Tarjeta con Logo superior derecho -->
+        <div class="card-header">
+            <div class="logo-wrapper">
+                <img src="neingenspa.png" alt="NEINGEN SpA" class="logo-img">
+            </div>
 
-            <div class="contact-details">
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <span>+56 9 8767 6686</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>williams.neira@neingen.cl</span>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-globe"></i>
-                    <span>www.neingen.cl</span>
-                </div>
+            <h1>Williams Neira Garrido</h1>
+            <div class="subtitle">Gerente General | NEINGEN SpA</div>
+            <div class="description">
+                Ingeniero Civil Industrial | Mg. Gestión Tecnológica<br>
+                Socio Profesional CCI
+            </div>
+            
+            <div class="contact-info">
+                <a href="tel:+56987676686"><span class="contact-icon">📞</span> +56 9 8767 6686</a>
+                <a href="mailto:williams.neira@neingen.cl"><span class="contact-icon">✉️</span> williams.neira@neingen.cl</a>
+                <a href="https://neingen.cl" target="_blank"><span class="contact-icon">🌐</span> www.neingen.cl</a>
             </div>
         </div>
-    </div>
 
-    <!-- Botones de Acción -->
-    <div class="actions">
-        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">
-            <i class="fas fa-address-card"></i> Guardar en Contactos
-        </a>
+        <!-- Botones de Acción Principal -->
+        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">📇 Guardar en Contactos</a>
+        
+        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">💬 Mensaje por WhatsApp</a>
 
-        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">
-            <i class="fab fa-whatsapp"></i> Mensaje por WhatsApp
-        </a>
+        <!-- Matriz de Acciones Secundarias -->
+        <div class="grid-btns">
+            <a href="mailto:williams.neira@neingen.cl" class="btn btn-secondary">✉️ Correo</a>
+            <a href="https://neingen.cl" target="_blank" class="btn btn-secondary">🌐 Sitio Web</a>
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">🔗 LinkedIn</a>
+            <a href="tel:+56987676686" class="btn btn-secondary">📞 Llamar</a>
+        </div>
 
-        <div class="btn-grid">
-            <a href="mailto:williams.neira@neingen.cl" class="btn btn-sub">
-                <i class="fas fa-envelope"></i> Correo
-            </a>
-            <a href="https://neingen.cl" target="_blank" class="btn btn-sub">
-                <i class="fas fa-globe"></i> Sitio Web
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" class="btn btn-sub">
-                <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="tel:+56987676686" class="btn btn-sub">
-                <i class="fas fa-phone"></i> Llamar
-            </a>
+        <!-- Sección QR -->
+        <div class="qr-section">
+            <div class="qr-title">ESCANEAR PARA COMPARTIR</div>
+            <div class="qr-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://neingen.cl/tarjeta.html" alt="Código QR Williams Neira">
+            </div>
+            <div class="footer-text">© neingen.cl</div>
         </div>
     </div>
-
-    <!-- Código QR -->
-    <div class="qr-section">
-        <p class="qr-title">ESCANEAR PARA COMPARTIR</p>
-        <div class="qr-box">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://neingen.cl/tarjeta.html" alt="QR Williams Neira">
-        </div>
-    </div>
-
-    <div class="footer">
-        © neingen.cl
-    </div>
-
-</div>
-
 </body>
 </html>
