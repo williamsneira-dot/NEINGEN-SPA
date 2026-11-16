@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEINGEN SpA | Gestión de operaciones y mejora de procesos para minería y construcción</title>
+    <meta name="description" content="Consultora de ingeniería aplicada en Talca: diagnóstico, indicadores y mejora continua de operaciones, logística y proyectos en minería y construcción.">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        html { scroll-behavior: smooth; }
+
+        :root {
+            --primary-color: #4b515d;
+            --accent-color: #1E8081;
+            --accent-hover: #166566;
+            --text-color: #334155;
+            --grafito: #4b515d;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-color);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        a:focus-visible, .btn:focus-visible {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 3px;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            gap: 6px;
+        }
+
+        .brand-container img { height: 120px; display: block; }
+
+        .brand-container h1 {
+            font-size: 1.75rem;
+            color: var(--grafito);
+            line-height: 1;
+            letter-spacing: 0.5px;
+        }
+
+        .brand-bold { font-weight: 700; }
+        .brand-light { font-weight: 400; }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        .hero {
+            background: linear-gradient(135deg, var(--grafito), #373c45);
+            color: var(--white);
+            text-align: center;
+            padding: 6rem 2rem;
+        }
+
+        .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 760px;
+            margin: 0 auto 2rem;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover { background-color: var(--accent-hover); }
+
+        .container { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        .container.narrow { max-width: 820px; }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .lead { font-size: 1.15rem; text-align: center; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .card h3 { margin-bottom: 0.75rem; color: var(--primary-color); }
+
+        .band { background-color: var(--white); }
+
+        .steps {
+            list-style: none;
+            counter-reset: paso;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .steps li { counter-increment: paso; }
+
+        .steps li::before {
+            content: counter(paso);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            margin-bottom: 0.75rem;
+            border-radius: 50%;
+            background-color: var(--accent-color);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .steps strong { display: block; color: var(--primary-color); }
+
+        .contact {
+            background: linear-gradient(135deg, var(--grafito), #373c45);
+            color: var(--white);
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .contact p { max-width: 700px; margin: 0 auto 1.5rem; font-size: 1.15rem; }
+        .contact .place { font-size: 0.95rem; color: #cbd5e1; margin: 1.25rem auto 0; }
+
+        footer {
+            background-color: var(--primary-color);
+            color: #d1d5db;
+            text-align: center;
+            padding: 2rem 1rem;
+            font-size: 0.9rem;
+        }
+
+        footer p { margin-bottom: 0.4rem; }
+
+        .email-link { color: #d1d5db; text-decoration: none; font-weight: 600; }
+        .email-link:hover { color: var(--white); text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; gap: 1rem; padding: 1rem; }
+            nav { display: flex; flex-wrap: wrap; justify-content: center; width: 100%; }
+            nav a { margin: 0.25rem 0.75rem; font-size: 0.95rem; }
+            .hero { padding: 4rem 1.5rem; }
+            .hero h2 { font-size: 2rem; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            * { transition: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="inicio">
+        <a href="#inicio" class="brand-container">
+            <img src="neingenspa.png" alt="Logo NEINGEN">
+            <h1><span class="brand-bold">NEINGEN</span> <span class="brand-light">SpA</span></h1>
+        </a>
+        <nav aria-label="Principal">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Especialidades</a>
+            <a href="#enfoque">Enfoque</a>
+            <a href="#equipo">Quién está detrás</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Ingeniería aplicada para un futuro más sostenible.</h2>
+        <p>Consultoría en gestión de operaciones y mejora de procesos para empresas de minería y construcción: diagnóstico, indicadores y mejora continua.</p>
+        <a href="#contacto" class="btn">Conversemos</a>
+    </section>
+
+    <div class="container narrow">
+        <p class="lead">NEINGEN SpA es una consultora de ingeniería aplicada con base en Talca, Región del Maule. Apoya a organizaciones de minería y construcción a identificar ineficiencias, reducir pérdidas y retrabajos y aprovechar mejor sus recursos, conectando la estrategia con la ejecución operacional.</p>
+    </div>
+
+    <div class="container" id="servicios">
+        <h2 class="section-title">Áreas de especialidad</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>Operaciones y procesos</h3>
+                <p>Diagnóstico y optimización de procesos productivos y de apoyo.</p>
+            </div>
+            <div class="card">
+                <h3>Logística y abastecimiento</h3>
+                <p>Compras, inventarios, almacenamiento y coordinación de recursos.</p>
+            </div>
+            <div class="card">
+                <h3>Mantenimiento y gestión de activos</h3>
+                <p>Mejora de los procesos de mantenimiento y del desempeño de los activos.</p>
+            </div>
+            <div class="card">
+                <h3>Gestión de proyectos</h3>
+                <p>Planificación, coordinación y control de plazos, costos y recursos.</p>
+            </div>
+            <div class="card">
+                <h3>Productividad y eficiencia</h3>
+                <p>Indicadores de desempeño y mejora continua.</p>
+            </div>
+            <div class="card">
+                <h3>Construcción industrializada y eficiencia energética</h3>
+                <p>Apoyo a proyectos habitacionales y de edificación orientados a la industrialización y al uso eficiente de la energía.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="band">
+        <div class="container" id="sectores">
+            <h2 class="section-title">Sectores de aplicación</h2>
+            <div class="services-grid">
+                <div class="card">
+                    <h3>Minería</h3>
+                    <p>Gestión de procesos de apoyo a las operaciones mineras.</p>
+                </div>
+                <div class="card">
+                    <h3>Construcción y edificación</h3>
+                    <p>Gestión de operaciones y proyectos constructivos y habitacionales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="enfoque">
+        <h2 class="section-title">Cómo se trabaja</h2>
+        <ol class="steps">
+            <li><strong>Diagnóstico</strong>Comprender la operación, sus datos y sus problemas.</li>
+            <li><strong>Indicadores</strong>Definir qué medir para decidir con evidencia.</li>
+            <li><strong>Plan de mejora</strong>Priorizar acciones con foco en costo, plazo, calidad y seguridad.</li>
+            <li><strong>Seguimiento</strong>Acompañar la implementación y revisar los resultados.</li>
+        </ol>
+    </div>
+
+    <div class="band">
+        <div class="container narrow" id="equipo">
+            <h2 class="section-title">Quién está detrás</h2>
+            <p>Williams Neira Garrido es Ingeniero Civil Industrial y Magíster en Gestión Tecnológica (Universidad de Talca). Ha trabajado en dos industrias: nueve años en gestión de operaciones mineras en el Grupo de Empresas SCAF (1998–2007) y más de 17 años como Gerente de Operaciones en Constructora Cerutti S.A. (2007–2025), donde gestionó proyectos habitacionales que suman 57 loteos, 6.000 viviendas y 275.000 m² construidos. Es miembro profesional del Consejo de Construcción Industrializada (CCI).</p>
+        </div>
+    </div>
+
+    <section class="contact" id="contacto">
+        <p>¿Tu organización enfrenta desafíos de eficiencia operacional, gestión de activos o ejecución de proyectos? Conversemos.</p>
+        <a href="mailto:contacto@neingen.cl" class="btn">contacto@neingen.cl</a>
+        <p class="place">Talca, Región del Maule, Chile</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 NEINGEN SpA. Todos los derechos reservados.</p>
+        <p><a href="#inicio" class="email-link">↑ Volver arriba</a></p>
+    </footer>
+</body>
+</html>
