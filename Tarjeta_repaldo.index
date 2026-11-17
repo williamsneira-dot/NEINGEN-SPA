@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Williams Neira Garrido - Tarjeta Digital</title>
+    <style>
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+        }
+        
+        body { 
+            background-color: #f5f5f7; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            height: 100dvh; 
+            padding: 8px; 
+            overflow: hidden; 
+        }
+
+        .container { 
+            background: #ffffff; 
+            width: 100%; 
+            max-width: 380px; 
+            max-height: 100dvh;
+            border-radius: 20px; 
+            overflow: hidden; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+            padding: 0 16px 14px 16px; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        /* Barra tricolor corporativa */
+        .top-bar { display: flex; height: 4px; width: 100%; margin: 8px 0 10px 0; border-radius: 3px; overflow: hidden; flex-shrink: 0; }
+        .bar-1 { background-color: #1e293b; flex: 1; }
+        .bar-2 { background-color: #0f766e; flex: 1; }
+        .bar-3 { background-color: #25d366; flex: 1; }
+        
+        /* Contenedor del encabezado optimizado */
+        .card-header { 
+            background: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 14px; 
+            padding: 12px 14px; 
+            position: relative; 
+            margin-bottom: 8px; 
+        }
+        
+        /* Isotipo n.png alineado arriba a la derecha */
+        .logo-wrapper { 
+            position: absolute;
+            top: 12px;
+            right: 14px;
+        }
+
+        .logo-img { 
+            width: 45px; 
+            height: auto; 
+            display: block; 
+            object-fit: contain; 
+        }
+        
+        /* Textos sin espacios vacíos */
+        h1 { 
+            font-size: 1.15rem; 
+            color: #0f172a; 
+            font-weight: 700; 
+            margin-bottom: 2px;
+            padding-right: 45px; /* Espacio para no chocar con el logo n.png */
+        }
+
+        .subtitle { 
+            font-size: 0.82rem; 
+            color: #334155; 
+            font-weight: 600; 
+            line-height: 1.2; 
+            margin-bottom: 6px; 
+        }
+
+        .description { 
+            font-size: 0.72rem; 
+            color: #64748b; 
+            line-height: 1.35; 
+            margin-bottom: 8px; 
+        }
+        
+        .contact-info { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 4px; 
+            font-size: 0.78rem; 
+            border-top: 1px solid #e2e8f0; 
+            padding-top: 8px; 
+        }
+
+        .contact-info a { 
+            color: #334155; 
+            text-decoration: none; 
+            font-weight: 500; 
+            display: flex; 
+            align-items: center; 
+            gap: 6px; 
+        }
+
+        .contact-icon { font-size: 0.85rem; opacity: 0.8; }
+        
+        /* Botones de acción */
+        .btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 10px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-decoration: none; margin-bottom: 6px; border: none; }
+        .btn-main { background: #1e293b; color: #ffffff; }
+        .btn-whatsapp { background: #25d366; color: #ffffff; }
+        .grid-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-bottom: 8px; }
+        .btn-secondary { background: #f1f5f9; color: #1e293b; font-size: 0.78rem; padding: 8px; border: 1px solid #e2e8f0; margin-bottom: 0; }
+        
+        .qr-section { text-align: center; border-top: 1px solid #f1f5f9; padding-top: 8px; }
+        .qr-title { font-size: 0.62rem; color: #64748b; letter-spacing: 1px; font-weight: 700; margin-bottom: 6px; }
+        .qr-box { background: white; padding: 6px; border: 1px solid #e2e8f0; border-radius: 12px; display: inline-block; }
+        .qr-box img { width: 95px; height: 95px; display: block; }
+        .footer-text { font-size: 0.62rem; color: #94a3b8; margin-top: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Barra tricolor superior -->
+        <div class="top-bar">
+            <div class="bar-1"></div>
+            <div class="bar-2"></div>
+            <div class="bar-3"></div>
+        </div>
+
+        <!-- Encabezado de Tarjeta equilibrado -->
+        <div class="card-header">
+            <!-- Isotipo 'N' compacto en la esquina superior derecha -->
+            <div class="logo-wrapper">
+                <img src="n.png" alt="NEINGEN N Logo" class="logo-img">
+            </div>
+
+            <h1>Williams Neira Garrido</h1>
+            <div class="subtitle">Gerente General | NEINGEN SpA</div>
+            <div class="description">
+                Ingeniero Civil Industrial<br>
+                Magíster en Gestión Tecnológica<br>
+                Socio Profesional CCI
+            </div>
+            
+            <div class="contact-info">
+                <a href="tel:+56987676686"><span class="contact-icon">📞</span> +56 9 8767 6686</a>
+                <a href="mailto:williams.neira@neingen.cl"><span class="contact-icon">✉️</span> williams.neira@neingen.cl</a>
+                <a href="https://neingen.cl" target="_blank"><span class="contact-icon">🌐</span> www.neingen.cl</a>
+            </div>
+        </div>
+
+        <!-- Botones Principales -->
+        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">📇 Guardar en Contactos</a>
+        
+        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">💬 Mensaje por WhatsApp</a>
+
+        <!-- Botones Secundarios -->
+        <div class="grid-btns">
+            <a href="mailto:williams.neira@neingen.cl" class="btn btn-secondary">✉️ Correo</a>
+            <a href="https://neingen.cl" target="_blank" class="btn btn-secondary">🌐 Sitio Web</a>
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">🔗 LinkedIn</a>
+            <a href="tel:+56987676686" class="btn btn-secondary">📞 Llamar</a>
+        </div>
+
+        <!-- Sección QR -->
+        <div class="qr-section">
+            <div class="qr-title">ESCANEAR PARA COMPARTIR</div>
+            <div class="qr-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://neingen.cl/tarjeta.html" alt="Código QR Williams Neira">
+            </div>
+            <div class="footer-text">© neingen.cl</div>
+        </div>
+    </div>
+</body>
+</html>
