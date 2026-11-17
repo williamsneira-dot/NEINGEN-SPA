@@ -37,7 +37,7 @@
             justify-content: space-between;
         }
         
-        /* Barra tricolor corporativa */
+        /* Barra tricolor corporativa sobria (sin verde claro) */
         .top-bar { display: flex; height: 4px; width: 100%; margin: 8px 0 10px 0; border-radius: 3px; overflow: hidden; flex-shrink: 0; }
         .bar-1 { background-color: #4b515d; flex: 1; }
         .bar-2 { background-color: #1E8081; flex: 1; }
@@ -109,7 +109,7 @@
             gap: 6px; 
         }
 
-        .contact-icon { font-size: 0.85rem; opacity: 0.8; }
+        .contact-icon { display: inline-flex; align-items: center; opacity: 0.85; }
         
         /* Botones de acción */
         .btn { display: flex; align-items: center; justify-content: center; gap: 6px; width: 100%; padding: 10px; border-radius: 10px; font-size: 0.85rem; font-weight: 600; text-decoration: none; margin-bottom: 6px; border: none; }
@@ -150,23 +150,44 @@
             </div>
             
             <div class="contact-info">
-                <a href="tel:+56987676686"><span class="contact-icon">📞</span> +56 9 8767 6686</a>
-                <a href="mailto:williams.neira@neingen.cl"><span class="contact-icon">✉️</span> williams.neira@neingen.cl</a>
-                <a href="https://neingen.cl" target="_blank"><span class="contact-icon">🌐</span> www.neingen.cl</a>
+                <a href="tel:+56987676686">
+                    <span class="contact-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+                    +56 9 8767 6686
+                </a>
+                <a href="mailto:williams.neira@neingen.cl">
+                    <span class="contact-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg></span>
+                    williams.neira@neingen.cl
+                </a>
+                <a href="https://neingen.cl" target="_blank">
+                    <span class="contact-icon"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+                    www.neingen.cl
+                </a>
             </div>
         </div>
 
         <!-- Botones Principales -->
-        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">📇 Guardar en Contactos</a>
+        <a href="data:text/vcard;charset=utf-8,BEGIN%3AVCARD%0AVERSION%3A3.0%0AN%3ANeira%20Garrido%3BWilliams%3B%3B%3B%0AFN%3AWilliams%20Neira%20Garrido%0ATITLE%3AGerente%20General%20-%20NEINGEN%20SpA%0AORG%3ANEINGEN%20SpA%0ATEL%3BTYPE%3DCELL%3A%2B56987676686%0AEMAIL%3Awilliams.neira%40neingen.cl%0AURL%3Ahttps%3A%2F%2Fneingen.cl%0AEND%3AVCARD" download="Williams_Neira.vcf" class="btn btn-main">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg> Guardar en Contactos
+        </a>
         
-        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">💬 Mensaje por WhatsApp</a>
+        <a href="https://wa.me/56987676686?text=Hola%20Williams%2C%20he%20recibido%20tu%20tarjeta%20digital." target="_blank" class="btn btn-whatsapp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg> Mensaje por WhatsApp
+        </a>
 
         <!-- Botones Secundarios -->
         <div class="grid-btns">
-            <a href="mailto:williams.neira@neingen.cl" class="btn btn-secondary">✉️ Correo</a>
-            <a href="https://neingen.cl" target="_blank" class="btn btn-secondary">🌐 Sitio Web</a>
-            <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">🔗 LinkedIn</a>
-            <a href="tel:+56987676686" class="btn btn-secondary">📞 Llamar</a>
+            <a href="mailto:williams.neira@neingen.cl" class="btn btn-secondary">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg> Correo
+            </a>
+            <a href="https://neingen.cl" target="_blank" class="btn btn-secondary">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> Sitio Web
+            </a>
+            <a href="https://www.linkedin.com" target="_blank" class="btn btn-secondary">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn
+            </a>
+            <a href="tel:+56987676686" class="btn btn-secondary">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> Llamar
+            </a>
         </div>
 
         <!-- Sección QR -->
